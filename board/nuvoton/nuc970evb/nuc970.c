@@ -22,6 +22,7 @@
 #include <common.h>
 #include <asm/io.h>
 #include "../../../drivers/gpio/nuc970_gpio.h"
+#include "nuc972_pwm.h"
 
 #define REG_SDIC_SIZE0  0xB0001810   
 #define REG_SDIC_SIZE1  0xB0001814  
@@ -229,6 +230,15 @@ void enable_caches(void)
 int board_init(void)
 {
     gd->bd->bi_boot_params = 0x100;
+
+    //lzy add 2016.8.30
+    gpio_request(GPIO_PB9, "Relay 1"); 
+    gpio_direction_output(GPIO_PB9, 0);
+    gpio_request(GPIO_PB10, "Relay 2"); 
+    gpio_direction_output(GPIO_PB10, 0);
+
+    //lzy add 2016.10.6
+    PWM_Timer(PWM_TIMER1);
 
     return(0);
 }
