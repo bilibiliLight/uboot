@@ -238,7 +238,8 @@ int board_init(void)
     gpio_direction_output(GPIO_PB10, 0);
 
     //lzy add 2016.10.6
-    PWM_Timer(PWM_TIMER1);
+    PWM_Timer(PWM_TIMER0);
+    printf("PWM0 PD12 init done!\n");
 
     return(0);
 }

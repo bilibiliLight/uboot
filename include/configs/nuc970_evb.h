@@ -207,12 +207,12 @@
 
 /* Following block is for LCD support */
 #if 1
-#define CONFIG_LCD
-#define CONFIG_NUC970_LCD
-#define LCD_BPP                         LCD_COLOR16
-#define CONFIG_LCD_LOGO
-#define CONFIG_LCD_INFO
-#define CONFIG_LCD_INFO_BELOW_LOGO
+//#define CONFIG_LCD
+//#define CONFIG_NUC970_LCD
+//#define LCD_BPP                         LCD_COLOR16
+//#define CONFIG_LCD_LOGO
+//#define CONFIG_LCD_INFO
+//#define CONFIG_LCD_INFO_BELOW_LOGO
 #define CONFIG_SYS_CONSOLE_IS_IN_ENV
 #define CONFIG_SYS_CONSOLE_OVERWRITE_ROUTINE
 #endif

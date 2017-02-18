@@ -87,7 +87,10 @@ INT PWM_Timer(INT timer_num)
     pwmIoctl(timer_num, SET_MODE, 0, PWM_TOGGLE);
     pwmIoctl(timer_num, DISABLE_DZ_GENERATOR, 0, 0);
     if(timer_num == PWM_TIMER0)
-        pwmIoctl(timer_num, ENABLE_PWMGPIOOUTPUT, PWM_TIMER0, PWM0_GPA12);
+    {
+        //pwmIoctl(timer_num, ENABLE_PWMGPIOOUTPUT, PWM_TIMER0, PWM0_GPA12);
+        pwmIoctl(timer_num, ENABLE_PWMGPIOOUTPUT, PWM_TIMER0, PWM0_GPD12);
+    }
     else if(timer_num == PWM_TIMER1)
     {
         //pwmIoctl(timer_num, ENABLE_PWMGPIOOUTPUT, PWM_TIMER1, PWM1_GPA13);
